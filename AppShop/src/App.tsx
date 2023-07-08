@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import shop from './assets/shop-solid.svg'
@@ -21,15 +21,6 @@ function App() {
 
 
     <Router>
-      {/* <nav className='nav-app'>
-        <ul>
-          <li>
-            <Link to="/navbar">Navbar test</Link>
-          </li>
-        </ul>
-      </nav> */}
-
-
       <div className='App'>
         <Routes>
           <Route path="/" element={<Navbar />} />
@@ -43,43 +34,34 @@ function App() {
       </div>
 
 
-      <nav className='nav-icon'>
-        <button>
-          <Link to="/shop">
-            <svg width="30px" height="30px">
-              <image href={shop} width="30px" height="30px" />
-            </svg>
-          </Link>
-        </button>
-        <button>
-          <Link to="/cart">
-            <svg width="30px" height="30px">
-              <image href={cart} width="30px" height="30px" />
-            </svg>
-          </Link>
-        </button>
-        <button>
-          <Link to="/favorite">
-            <svg width="30px" height="30px">
-              <image href={heart} width="30px" height="30px" />
-            </svg>
-          </Link>
-        </button>
-        <button>
-          <Link to="/setting">
-            <svg width="30px" height="30px">
-              <image href={gear} width="30px" height="30px" />
-            </svg>
-          </Link>
-        </button>
-        <button>
-          <Link to="/notification">
-            <svg width="30px" height="30px">
-              <image href={bell} width="30px" height="30px" />
-            </svg>
-          </Link>
-        </button>
+      <nav className="nav-icon">
+        <NavLink to="/shop" activeClassName="active">
+          <svg width="50px" height="50px">
+            <image href={shop} width="50px" height="50px" />
+          </svg>
+        </NavLink>
+        <NavLink to="/cart" activeClassName ="active">
+          <svg width="50px" height="50px">
+            <image href={cart} width="50px" height="50px" />
+          </svg>
+        </NavLink>
+        <NavLink to="/favorite" activeClassName="active">
+          <svg width="50px" height="50px">
+            <image href={heart} width="50px" height="50px" />
+          </svg>
+        </NavLink>
+        <NavLink to="/setting" activeClassName="active">
+          <svg width="50px" height="50px">
+            <image href={gear} width="50px" height="50px" />
+          </svg>
+        </NavLink>
+        <NavLink to="/notification" activeClassName="active">
+          <svg width="50px" height="50px">
+            <image href={bell} width="50px" height="50px" />
+          </svg>
+        </NavLink>
       </nav>
+
 
     </Router>
   )

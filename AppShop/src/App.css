@@ -1,5 +1,14 @@
+:root{
+  --Blue : #2192FF;
+  --Green : #38E54D;
+  --Light-Green: #9CFF2E;
+  --Yello : #FDFF00;
+  --White : #FFFFFF
+}
+
+
 .nav-icon{
-  background: rgba(0,0,0,.3);
+  background: var(--Green);
   width: max-content;
   padding: .7rem 1.7rem;
   z-index: 2;
@@ -13,20 +22,20 @@
   backdrop-filter: blur(15px)
 }
 
-.nav-icon button {
+.nav-icon a {
   background: transparent;
-  padding: .9rem;
+  padding: .5rem;
   border-radius: 50%;
   display: flex;
-  color: var(--color-light);
-  font-size: 1.1rem
+  color: var(--Blue);
+  font-size: 1.1rem;
 }
 
-.nav-icon button:hover {
-  background: rgba(0,0,0,.3)
+.nav-icon a:hover {
+  background: var(--White);
 }
 
-.nav-icon button.active {
-  background: var(--color-primary);
-  color: var(--color-white)
+.nav-icon a.active {
+  background: var(--White);
+  color: var(--White)
 }
