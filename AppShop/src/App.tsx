@@ -1,6 +1,6 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom'
-import Navbar from './components/Navbar'
+import Navbar from './untils/Navbar'
 import Home from './components/Home'
 import shop from './assets/shop-solid.svg'
 import cart from './assets/cart-shopping-solid.svg'
@@ -19,17 +19,17 @@ function App() {
 
   return (
 
-
     <Router>
+      <Navbar></Navbar>
       <div className='App'>
         <Routes>
-          <Route path="/" element={<Navbar />} />
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/favorite" element={<Favorite />} />
           <Route path="/setting" element={<Setting />} />
           <Route path="/notification" element={<Notification />} />
+          <Route path="/" element={<Navbar />} />
         </Routes>
       </div>
 
@@ -40,7 +40,7 @@ function App() {
             <image href={shop} width="50px" height="50px" />
           </svg>
         </NavLink>
-        <NavLink to="/cart" activeClassName ="active">
+        <NavLink to="/cart" activeClassName="active">
           <svg width="50px" height="50px">
             <image href={cart} width="50px" height="50px" />
           </svg>
