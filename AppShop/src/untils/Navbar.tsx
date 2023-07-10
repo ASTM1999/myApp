@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes, Link } from 'react-router-dom';
 import Counter from '../components/Counter';
 import Todo from '../components/Todo';
 

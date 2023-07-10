@@ -39,9 +39,12 @@ const todoSlice = createSlice({
             if (todoToRename) {
                 todoToRename.text = text
             }
+        },
+        updateTodos: (state, action: PayloadAction<Todo[]>) => {
+            state.todos = action.payload
         }
     }
 })
 
-export const { addTodo, removeTodo, renameTodo } = todoSlice.actions
+export const { addTodo, removeTodo, renameTodo, updateTodos } = todoSlice.actions
 export default todoSlice.reducer
