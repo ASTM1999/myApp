@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/reducers/rootReducer";
 import { addTodo, removeTodo, renameTodo } from '../redux/reducers/todoReducers'
+// import { useEffect } from "react";
+
 
 
 interface Todo {
@@ -9,9 +11,15 @@ interface Todo {
     completed: boolean;
 }
 const Todo = () => {
-
     const todos: Todo[] = useSelector((state: RootState) => state.todos.todos)
     const dispatch = useDispatch();
+
+    // useEffect(() => {
+    //     const storedTodos = localStorage.getItem('todos')
+    //     if(storedTodos) {
+    //         dispatch(addTodo(JSON.parse(storedTodos)))
+    //     }
+    // }, [dispatch])
 
     const handleAddTodo = () => {
         const text = prompt('Enter a new todo')
@@ -22,6 +30,8 @@ const Todo = () => {
     }
 
     const handleRemoveTodo = (id: number) => {
+
+        console.log("id: ", id)
         dispatch(removeTodo(id))
     }
 

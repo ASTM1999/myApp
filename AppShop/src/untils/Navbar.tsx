@@ -2,7 +2,7 @@
 import { Route, Routes, Link } from 'react-router-dom';
 import Counter from '../components/Counter';
 import Todo from '../components/Todo';
-
+import './navbar.css'
 
 
 const Navbar = () => {
@@ -11,12 +11,12 @@ const Navbar = () => {
         <div className='nav-header'>
                 <nav>
                     <ul>
-                        <li>
+                        <a>
                             <Link to="/counter">Counter Reducer</Link>
-                        </li>
-                        <li>
+                        </a>
+                        <a>
                             <Link to="/todo">Todo</Link>
-                        </li>
+                        </a>
                     </ul>
                 </nav>
 
