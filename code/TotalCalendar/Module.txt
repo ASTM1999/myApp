@@ -1,0 +1,16 @@
+ModuleAuthentication:
+    Admin
+    Status
+    User (UserAdmin)
+
+ModuleActivity:
+    User (UserAdmin)
+    Camp
+    Activity
+    Announcement
+    Comment
+    
+
+ModuleCalendar:
+    UserAdmin
+    TotalCalendar
